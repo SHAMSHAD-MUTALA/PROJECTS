@@ -13,7 +13,7 @@
             padding: 0;
         }
         .container {
-            width: 60%;
+            width: 90%; /* Adjusted for smaller screens */
             margin: 20px auto;
             background: white;
             padding: 20px;
@@ -48,6 +48,39 @@
         }
         a:hover {
             text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                width: 95%; /* Wider container for smaller screens */
+                padding: 15px;
+            }
+            table {
+                display: block;
+                overflow-x: auto; /* Horizontal scroll for small screens */
+            }
+            th, td {
+                padding: 8px; /* Smaller padding for smaller screens */
+                font-size: 0.9rem; /* Smaller font size */
+            }
+            th {
+                font-size: 1rem; /* Slightly larger for headers */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                width: 100%; /* Full width for very small screens */
+                padding: 10px;
+            }
+            th, td {
+                padding: 6px; /* Even smaller padding */
+                font-size: 0.8rem; /* Smaller font size */
+            }
+            th {
+                font-size: 0.9rem; /* Slightly larger for headers */
+            }
         }
     </style>
 </head>
@@ -139,10 +172,11 @@
             </tbody>
         </table>
     </div>
-    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
-            style="position: fixed; bottom: 20px; right: 20px; padding: 20px; background: #444; color: white; border: none; border-radius: 50%; cursor: pointer;">
-        ↑
-    </button>
+     <!-- Back to Top Button -->
+     <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
+     style="position: fixed; bottom: 20px; right: 20px; padding: 20px; background: #444; color: white; border: none; border-radius: 50%; cursor: pointer;">
+ ↑
+</button>
    
 </body>
 </html>
